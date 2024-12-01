@@ -1,0 +1,76 @@
+---
+title: "Using the rxy Package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using the rxy Package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+
+# Ensure the package is loaded
+library(rxy)
+```
+
+Introduction 
+
+The rxy package provides tools for analyzing correlations
+between a dependent variable and multiple independent variables. It also
+includes methods for printing, plotting, and summarizing the results.
+
+This vignette demonstrates how to use the package with the Boston
+dataset from the MASS package.
+
+Getting Started
+
+Install and load the rxy package:
+```{r}
+# Install the package (if not already installed)
+# devtools::install("path_to_rxy")
+library(rxy)
+
+```
+Load the MASS package and use the Boston dataset:
+```{r}
+library(MASS)
+data("Boston")
+
+```
+
+Analyze Correlations
+
+Run the ryx function to analyze correlations between the dependent variable (medv) and independent variables:
+```{r}
+result <- ryx(Boston, y = "medv")
+```
+
+Print the Results
+
+Use the print method to display the correlation results:
+```{r}
+print(result)
+```
+
+Plot the Results
+
+Plotting the results with the plot method:
+```{r}
+plot(result)
+```
+
+Summarize the Results
+
+Summarize the correlations with the summary method:
+```{r}
+summary(result)
+```
+
+Conclusion
+
+The rxy package provides an intuitive way to explore relationships between a dependent variable and multiple independent variables. Its print, plot, and summary methods make it easy to interpret the results.
+

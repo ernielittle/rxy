@@ -1,0 +1,8 @@
+title: rxy
+template:
+  params:
+    bootswatch: cerulean  # Optional theme
+    bs_version: 5         # Use Bootstrap 5
+url: https://ernielittle.github.io/rxy
+home:
+  href: README.md       # Use README.md as the homepage

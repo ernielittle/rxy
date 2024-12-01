@@ -1,12 +1,17 @@
 Package: rxy
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
-Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+Title: Correlation Analysis with S3 Methods
+Version: 0.1.0
+Authors@R: c(person("Ernie", "Little", email = "elittle@wesleyan.edu", role = c("aut", "cre")))
+Description: A simple package for analyzing correlations between a dependent variable and multiple independent variables with S3 methods.
+License: MIT
+LazyData: true
 Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
 RoxygenNote: 7.3.2
+Imports: 
+    ggplot2,
+    stats,
+    graphics

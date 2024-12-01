@@ -1,0 +1,64 @@
+---
+title: "README"
+output: github_document
+---
+![Correlation Analysis](correlation.png)
+
+# rxy
+
+`rxy` is an R package for analyzing correlations between a dependent variable and multiple independent variables. It includes methods for:
+- Printing correlation tables with statistical significance.
+- Plotting correlations with color-coded visualizations.
+- Summarizing correlations with detailed summaries.
+
+## Installation
+
+To install the package from source, use the following:
+
+devtools::install("path/to/rxy")
+
+Usage
+
+Analyze Correlations
+
+Here’s how to use rxy with the Boston dataset from the MASS package:
+```{r}
+library(MASS)
+library(rxy)
+
+# Analyze correlations
+result <- ryx(Boston, y = "medv")
+
+```
+
+Print Results
+
+Display the correlation results:
+```{r}
+print(result)
+```
+
+Visualize Results
+
+Create a plot of the absolute correlations:
+```{r}
+plot(result)
+
+```
+![Plot of Correlations](man/figures/plot_result.png)
+
+
+Summarize Results
+
+Summarize the correlations with statistical significance:
+```{r}
+summary(result)
+```
+
+Features
+
+  Automatic correlation analysis for numeric variables.
+  Customizable visualizations to understand relationships.
+  Statistical summaries for in-depth analysis.
+
+
